@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CybVC: AI-Powered Venture Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div class="presentation-container">
+        <!-- Navigation Controls -->
+        <div class="navigation-controls">
+            <button class="nav-btn" id="prevBtn">&larr;</button>
+            <span class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">12</span>
+            </span>
+            <button class="nav-btn" id="nextBtn">&rarr;</button>
+        </div>
+
+        <!-- Slide 1: Title -->
+        <div class="slide active" data-slide="1">
+            <div class="slide-content title-slide">
+                <div class="title-content">
+                    <h1 class="main-title">CybVC: AI-Powered Venture Studio</h1>
+                    <p class="subtitle">Революционная модель создания и ускорения стартапов</p>
+                    <div class="title-description">
+                        <p>Инновационная VC студия с AI-ускорением для нового поколения предпринимателей</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Executive Summary -->
+        <div class="slide" data-slide="2">
+            <div class="slide-content">
+                <h2 class="slide-title">Executive Summary 2024-2025</h2>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <div class="summary-number">$110B</div>
+                        <div class="summary-text">AI инвестиции в 2024 году<br><span class="highlight">+62% рост</span></div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-number">$337.4B</div>
+                        <div class="summary-text">Глобальный VC рынок<br><span class="highlight">17.56% CAGR</span></div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-number">60%</div>
+                        <div class="summary-text">IRR венчурных студий<br><span class="highlight">vs 21% традиционные VC</span></div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-number">42%</div>
+                        <div class="summary-text">VC фирм используют AI<br><span class="highlight">для deal sourcing</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Problem -->
+        <div class="slide" data-slide="3">
+            <div class="slide-content">
+                <h2 class="slide-title">Проблема традиционного VC</h2>
+                <div class="problem-grid">
+                    <div class="problem-item">
+                        <div class="problem-icon">🐌</div>
+                        <h3>Медленный процесс</h3>
+                        <p>56 месяцев до Series A против 25.2 у студий</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">📉</div>
+                        <h3>Низкая эффективность</h3>
+                        <p>Только 50% стартапов получают seed-раунд</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">👁️</div>
+                        <h3>Ограниченный обзор</h3>
+                        <p>Пропуск перспективных проектов из-за человеческого фактора</p>
+                    </div>
+                    <div class="problem-item">
+                        <div class="problem-icon">💰</div>
+                        <h3>Низкая доходность</h3>
+                        <p>21% IRR против 60% у венчурных студий</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Our Solution -->
+        <div class="slide" data-slide="4">
+            <div class="slide-content">
+                <h2 class="slide-title">Наше решение: AI-автоматизация пайплайна</h2>
+                <div class="solution-pipeline">
+                    <div class="pipeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>AI Deal Sourcing</h3>
+                            <p>24/7 мониторинг всех источников сделок</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Автоматический скоринг</h3>
+                            <p>ML фильтрация и ранжирование проектов</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Ускоренный цикл</h3>
+                            <p>От 12 недель до 2-3 недель</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Studio Support</h3>
+                            <p>Hands-on поддержка и expertise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Market Trends -->
+        <div class="slide" data-slide="5">
+            <div class="slide-content">
+                <h2 class="slide-title">Рыночные тренды: AI инвестиции</h2>
+                <div class="trends-container">
+                    <div class="trend-stat">
+                        <div class="stat-number">$110B</div>
+                        <div class="stat-label">AI инвестиции 2024</div>
+                        <div class="stat-growth">+62% рост</div>
+                    </div>
+                    <div class="trends-chart">
+                        <div style="position: relative; height: 350px; width: 100%;">
+                            <canvas id="trendsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Venture Studio vs VC -->
+        <div class="slide" data-slide="6">
+            <div class="slide-content">
+                <h2 class="slide-title">Venture Studio vs VC: Performance метрики</h2>
+                <div class="comparison-container">
+                    <div style="position: relative; height: 400px; width: 100%;">
+                        <canvas id="metricsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Technology Architecture -->
+        <div class="slide" data-slide="7">
+            <div class="slide-content">
+                <h2 class="slide-title">Технологическая архитектура: AI Deal Sourcing</h2>
+                <div class="tech-architecture">
+                    <div class="tech-layer">
+                        <h3>Источники данных</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">GitHub API</div>
+                            <div class="tech-item">ProductHunt</div>
+                            <div class="tech-item">HackerNews</div>
+                            <div class="tech-item">Social Media</div>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>AI/ML инструменты</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">GPT-4</div>
+                            <div class="tech-item">Claude</div>
+                            <div class="tech-item">Custom ML Models</div>
+                            <div class="tech-item">NLP Processing</div>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>Автоматизация</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">CRM Integration</div>
+                            <div class="tech-item">Due Diligence AI</div>
+                            <div class="tech-item">Document Analysis</div>
+                        </div>
+                    </div>
+                    <div class="tech-layer">
+                        <h3>Аналитика</h3>
+                        <div class="tech-items">
+                            <div class="tech-item">Performance Tracking</div>
+                            <div class="tech-item">Portfolio Monitoring</div>
+                            <div class="tech-item">Risk Assessment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Competitive Advantages -->
+        <div class="slide" data-slide="8">
+            <div class="slide-content">
+                <h2 class="slide-title">Конкурентные преимущества</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🤖</div>
+                        <h3>24/7 AI мониторинг</h3>
+                        <p>всех источников сделок</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">⚡</div>
+                        <h3>10x больше проектов</h3>
+                        <p>обработанных за период</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🎯</div>
+                        <h3>Сокращение цикла</h3>
+                        <p>с 12 до 2-3 недель</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">📈</div>
+                        <h3>Venture studio модель</h3>
+                        <p>с 60% IRR показателем</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🧠</div>
+                        <h3>AI экспертиза</h3>
+                        <p>команды с опытом exit-ов</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🔍</div>
+                        <h3>Автоматический скоринг</h3>
+                        <p>и фильтрация проектов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Team -->
+        <div class="slide" data-slide="9">
+            <div class="slide-content">
+                <h2 class="slide-title">Команда и экспертиза</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-icon">👥</div>
+                        <h3>Основатели</h3>
+                        <p>С опытом exit-стартапов и глубокой экспертизой в AI</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-icon">🎯</div>
+                        <h3>Advisory Board</h3>
+                        <p>Лидеры AI и VC индустрии из Европы и США</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-icon">🔧</div>
+                        <h3>Tech Expertise</h3>
+                        <p>Экспертиза в запуске и масштабировании AI-продуктов</p>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-icon">🌐</div>
+                        <h3>Network</h3>
+                        <p>Глобальная сеть менторов, экспертов и партнеров</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Financial Projections -->
+        <div class="slide" data-slide="10">
+            <div class="slide-content">
+                <h2 class="slide-title">Финансовые прогнозы 2025-2027</h2>
+                <div class="financials-container">
+                    <div class="projections-chart">
+                        <div style="position: relative; height: 350px; width: 100%;">
+                            <canvas id="financialsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="projections-table">
+                        <div class="table-header">
+                            <div class="table-cell">Год</div>
+                            <div class="table-cell">Размер фонда</div>
+                            <div class="table-cell">IRR</div>
+                            <div class="table-cell">MOIC</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">2025</div>
+                            <div class="table-cell">$25M</div>
+                            <div class="table-cell">25%</div>
+                            <div class="table-cell">3.5x</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">2026</div>
+                            <div class="table-cell">$65M</div>
+                            <div class="table-cell">27%</div>
+                            <div class="table-cell">3.7x</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell">2027</div>
+                            <div class="table-cell">$100M</div>
+                            <div class="table-cell">30%</div>
+                            <div class="table-cell">4.0x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Investment Proposal -->
+        <div class="slide" data-slide="11">
+            <div class="slide-content">
+                <h2 class="slide-title">Инвестиционное предложение</h2>
+                <div class="proposal-content">
+                    <div class="proposal-highlight">
+                        <h3>Присоединяйтесь к будущему венчурного инвестирования</h3>
+                        <p>Первый AI-powered venture studio с проверенной моделью</p>
+                    </div>
+                    <div class="proposal-metrics">
+                        <div class="metric-item">
+                            <div class="metric-number">$25M</div>
+                            <div class="metric-label">Первый фонд 2025</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-number">25%</div>
+                            <div class="metric-label">Целевой IRR</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-number">3.5x</div>
+                            <div class="metric-label">MOIC</div>
+                        </div>
+                    </div>
+                    <div class="proposal-benefits">
+                        <div class="benefit-item">✓ Доступ к эксклюзивным AI-стартапам</div>
+                        <div class="benefit-item">✓ Участие в венчурной студии нового поколения</div>
+                        <div class="benefit-item">✓ Прозрачная отчетность и governance</div>
+                        <div class="benefit-item">✓ Диверсифицированный портфель высокого потенциала</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Contact & Next Steps -->
+        <div class="slide" data-slide="12">
+            <div class="slide-content">
+                <h2 class="slide-title">Контакты и следующие шаги</h2>
+                <div class="contact-container">
+                    <div class="next-steps">
+                        <h3>Следующие шаги</h3>
+                        <div class="step-list">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <p>Детальное обсуждение инвестиционной стратегии</p>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <p>Демонстрация CybVC платформы в действии</p>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <p>Анализ конкретных deal flow кейсов</p>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">4</div>
+                                <p>Обсуждение условий партнерства</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <h3>Готовы к встрече?</h3>
+                        <p>Свяжитесь с нами для углубленного обсуждения возможностей</p>
+                        <div class="cta-button">
+                            <button class="btn btn--primary">Запланировать встречу</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
