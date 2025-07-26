@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Калькулятор для B2B Маркетинга</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ROI Калькулятор для B2B Маркетинга</h1>
+            <p>Рассчитайте возврат инвестиций от ваших маркетинговых кампаний</p>
+        </header>
+
+        <div class="calculator-grid">
+            <!-- Input Section -->
+            <div class="inputs-section">
+                <h2>Параметры кампании</h2>
+                
+                <div class="form-group">
+                    <label for="monthly-prospects" class="form-label">
+                        Контактов в месяц
+                        <span class="tooltip" data-tooltip="Количество потенциальных клиентов, с которыми вы связываетесь каждый месяц через email, LinkedIn или другие каналы">ℹ</span>
+                    </label>
+                    <input type="number" id="monthly-prospects" class="form-control" value="1000" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="open-rate" class="form-label">
+                        Открываемость писем: <span id="open-rate-value">25%</span>
+                        <span class="tooltip" data-tooltip="Процент писем, которые открывают получатели">ℹ</span>
+                    </label>
+                    <input type="range" id="open-rate" class="form-range" min="5" max="80" value="25">
+                </div>
+
+                <div class="form-group">
+                    <label for="reply-rate" class="form-label">
+                        Ответы на письма: <span id="reply-rate-value">5%</span>
+                        <span class="tooltip" data-tooltip="Процент открытых писем, на которые приходят ответы">ℹ</span>
+                    </label>
+                    <input type="range" id="reply-rate" class="form-range" min="1" max="30" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="meeting-booking-rate" class="form-label">
+                        Бронирование встреч: <span id="meeting-booking-rate-value">15%</span>
+                        <span class="tooltip" data-tooltip="Процент ответов, которые конвертируются в запланированные встречи">ℹ</span>
+                    </label>
+                    <input type="range" id="meeting-booking-rate" class="form-range" min="5" max="60" value="15">
+                </div>
+
+                <div class="form-group">
+                    <label for="meeting-to-opportunity" class="form-label">
+                        Встречи в возможности: <span id="meeting-to-opportunity-value">40%</span>
+                        <span class="tooltip" data-tooltip="Процент встреч, которые превращаются в квалифицированные продажные возможности">ℹ</span>
+                    </label>
+                    <input type="range" id="meeting-to-opportunity" class="form-range" min="10" max="80" value="40">
+                </div>
+
+                <div class="form-group">
+                    <label for="opportunity-close-rate" class="form-label">
+                        Закрытие сделок: <span id="opportunity-close-rate-value">20%</span>
+                        <span class="tooltip" data-tooltip="Процент возможностей, которые конвертируются в закрытые сделки">ℹ</span>
+                    </label>
+                    <input type="range" id="opportunity-close-rate" class="form-range" min="5" max="70" value="20">
+                </div>
+
+                <div class="form-group">
+                    <label for="average-deal-size" class="form-label">
+                        Средний размер сделки ($)
+                        <span class="tooltip" data-tooltip="Средняя стоимость каждой закрытой сделки в долларах США">ℹ</span>
+                    </label>
+                    <input type="number" id="average-deal-size" class="form-control" value="5000" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="monthly-costs" class="form-label">
+                        Ежемесячные затраты ($)
+                        <span class="tooltip" data-tooltip="Общие ежемесячные расходы на маркетинг и продажи включая инструменты, рекламу, зарплаты">ℹ</span>
+                    </label>
+                    <input type="number" id="monthly-costs" class="form-control" value="2000" min="0">
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section">
+                <h2>Результаты</h2>
+                
+                <div class="roi-highlight">
+                    <div class="roi-main">
+                        <span class="roi-label">ROI</span>
+                        <span class="roi-percentage" id="monthly-roi-display">0%</span>
+                    </div>
+                    <div class="roi-multiplier" id="roi-multiplier">0x возврат</div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Встречи в месяц</h3>
+                        <div class="metric-value" id="monthly-meetings">0</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>Возможности в месяц</h3>
+                        <div class="metric-value" id="monthly-opportunities">0</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>Сделки в месяц</h3>
+                        <div class="metric-value" id="monthly-deals">0</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <h3>Выручка в месяц</h3>
+                        <div class="metric-value" id="monthly-revenue">$0</div>
+                    </div>
+                </div>
+
+                <div class="annual-projections">
+                    <h3>Годовые прогнозы</h3>
+                    <div class="projection-row">
+                        <span>Выручка за год:</span>
+                        <span id="annual-revenue">$0</span>
+                    </div>
+                    <div class="projection-row">
+                        <span>Затраты за год:</span>
+                        <span id="annual-costs">$0</span>
+                    </div>
+                    <div class="projection-row">
+                        <span>ROI за год:</span>
+                        <span id="annual-roi">0%</span>
+                    </div>
+                    <div class="projection-row">
+                        <span>Стоимость привлечения:</span>
+                        <span id="cost-per-acquisition">$0</span>
+                    </div>
+                </div>
+
+                <div class="roi-explanation">
+                    <h4>Что означает ROI в B2B маркетинге?</h4>
+                    <p>ROI (Return on Investment) - это показатель эффективности ваших маркетинговых инвестиций. Положительный ROI означает, что ваша кампания приносит больше дохода, чем затрат на неё.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
